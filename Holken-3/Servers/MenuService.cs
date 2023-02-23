@@ -26,16 +26,20 @@ namespace Holken_3.Servers
 
 
             Console.Write("Gatuadress: ");
-            renter.Address.StreetName = Console.ReadLine() ?? "";
+            renter.PostalAddress.StreetName = Console.ReadLine() ?? "";
 
 
             Console.Write("Postnummer: ");
-            renter.Address.PostalCode = Console.ReadLine() ?? "";
+            renter.PostalAddress.PostalCode = Console.ReadLine() ?? "";
 
 
             Console.Write("Stad: ");
-            renter.Address.City = Console.ReadLine() ?? "";
+            renter.PostalAddress.City = Console.ReadLine() ?? "";
 
+
+            //save Renter to database
+            var database = new DatabaseService();
+            database.SaveToDatabase(renter);
 
         }
 

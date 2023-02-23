@@ -7,6 +7,6 @@
         public string LastName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
-        public Renter_Address Address { get; set; } = null!;
+        public Renter_Address PostalAddress { get; set; } = null!;
     }
 }
